@@ -13,7 +13,6 @@ export function AuthProvider({children}){
                     credentials: "include"
                 });
                 if (response.ok){
-                    print("User is authenticated");
                     const data= await response.json();
                     setUser(data);
                 }
@@ -24,7 +23,7 @@ export function AuthProvider({children}){
         }
         loadUser();
     },[]);
-
+    
     function logout(){
         fetch("http://127.0.0.1:8000/core/logout/",{method:"POST",
             credentials: "include"
@@ -32,6 +31,7 @@ export function AuthProvider({children}){
             setUser(null);
         });
     }
+
     return(
         <AuthContext.Provider value={{user,loading,logout}}>
             {children}

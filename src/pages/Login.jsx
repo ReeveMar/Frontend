@@ -4,6 +4,7 @@ export default function Login() {
     }
     return(
         <div className="container center column">
+        <h1>Stats+</h1>
         <button className="btn" onClick={handleLogin}>
             Sign in with Spotify
         </button>

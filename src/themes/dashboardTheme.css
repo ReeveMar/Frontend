@@ -1,0 +1,89 @@
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #121212; /* Spotify dark background */
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: #000000; /* Spotify uses deep black headers */
+  border-bottom: 1px solid #1f1f1f;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1db954; /* Spotify green */
+  letter-spacing: 0.5px;
+}
+
+/* --- Logout Button --- */
+.logout-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #1db954;
+  color: #000000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.logout-btn:hover {
+  background: #1ed760; /* lighter Spotify green */
+  transform: scale(1.05);
+}
+
+/* --- Center Content --- */
+.content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Button Grid --- */
+.button-grid {
+  width: 100%;
+  max-width: 900px; /* optional: keeps layout tidy on huge screens */
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* instead of center */
+  gap: 24px;
+}
+
+
+/* Make buttons expand to fill available space */
+.square-btn {
+  flex: 1; /* key change */
+  height: 160px; /* optional: adjust height */
+  border-radius: 12px;
+  border: none;
+  background: #181818;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.square-btn:hover {
+  background: #282828;
+  transform: scale(1.05);
+}
+
+/* Make each row stretch */
+.bottom-row {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
