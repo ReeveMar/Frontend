@@ -3,11 +3,9 @@ export default function Login() {
         window.location.href = 'http://127.0.0.1:8000/core/login/';
     }
     return(
-        <div className="container center column">
-        <h1>Stats+</h1>
-        <button className="btn" onClick={handleLogin}>
-            Sign in with Spotify
-        </button>
+        <div className="login-container">
+            <h1 className="login-title">Stats+</h1>
+            <button className="login-button" onClick={handleLogin}>Login with Spotify</button>
         </div>
     );
 }

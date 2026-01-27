@@ -6,7 +6,7 @@ const Dashboard = () => {
   return (
     <div className="page">
       <header className="header">
-        <div className="logo">MyLogo</div>
+        <div className="logo">Stats+</div>
         <button className="logout-btn" onClick={logout}>Logout</button>
       </header>
 
