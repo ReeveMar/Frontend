@@ -1,8 +1,14 @@
 import {useAuth} from "../context/AuthContext.jsx";
-
-
+import { useNavigate } from "react-router-dom";
 const Dashboard = () => {
     const {user,logout}=useAuth();
+    const navigate = useNavigate();
+    const handleClickStats = () => {
+      navigate('/stats');
+  };
+  const handleClickTopTracks = () => {
+    navigate('/top-tracks');
+};
   return (
     <div className="page">
       <header className="header">
@@ -13,11 +19,11 @@ const Dashboard = () => {
       <main className="content">
         <div className="button-grid">
           <div className="bottom-row">
-          <button className="square-btn top-btn">Button 1</button>
+          <button className="square-btn top-btn" onClick={handleClickStats}>Top Artists and Genres</button>
           </div>
              <div className="bottom-row">
-               <button className="square-btn">Button 2</button>
-               <button className="square-btn">Button 3</button>
+               <button className="square-btn" onClick={handleClickTopTracks}>Top Tracks</button>
+               <button className="square-btn">Recommended Tracks</button>
             </div>
         </div>
      
