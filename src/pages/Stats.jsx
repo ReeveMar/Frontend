@@ -33,7 +33,7 @@ const Stats = () => {
           <h2>Top Genres</h2>
           <ol>{user.favourite_genres.map((genre,index) => (
             <li key={index} style={{ display: "flex", alignItems: "center", gap: "20px", padding: "54px",borderBottom: "1px solid #e5e5e5" }}>
-              #{index + 1}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{genre}
+              #{index + 1}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{genre.charAt(0).toUpperCase() + genre.slice(1)}
                
             </li>
       
