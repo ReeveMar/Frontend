@@ -1,6 +1,6 @@
 export default function Login() {
     function handleLogin(){
-        window.location.href = 'https://[127.0.0.1]:8000/';
+        window.location.href = 'https://127.0.0.1:8000/';
     }
     return(
         <div className="login-container">

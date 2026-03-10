@@ -9,7 +9,7 @@ export function AuthProvider({children}){
     useEffect(()=>{
         async function loadUser(){
             try{
-                const response= await fetch("https://[127.0.0.1]:8000/core/users/me/",{method:"GET",
+                const response= await fetch("https://127.0.0.1:8000/core/users/me/",{method:"GET",
                     credentials: "include"
                 });
                 if (response.ok){
@@ -25,7 +25,7 @@ export function AuthProvider({children}){
     },[]);
     
     function logout(){
-        fetch("https://[127.0.0.1]:8000/core/logout/",{method:"POST",
+        fetch("https://127.0.0.1:8000/core/logout/",{method:"POST",
             credentials: "include"
         }).then(()=>{
             setUser(null);
